@@ -4,22 +4,28 @@
     <title>Banner GitHub</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
         @keyframes blink {
-            0%   {visibility: visible;}
-            50%  {visibility: hidden;}
-            100% {visibility: visible;}
+            0%   {opacity: 0;}
+            50%  {opacity: 1;}
+            100% {opacity: 0;}
         }
-        .container {
+        html, body {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
-            font-family: 'Roboto', sans-serif;
             background-color: #f4f4f4;
+            font-family: 'Roboto', sans-serif;
         }
         .loading {
+            font-family: 'Playfair Display', serif;
             font-size: 48px;
+            color: #e91e63;
         }
         .loading::after {
             content: '...';
@@ -32,7 +38,7 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <div>
         <div class="loading">Loading</div>
         <div class="construction">Sistema em construção. Volte em breve!</div>
     </div>
